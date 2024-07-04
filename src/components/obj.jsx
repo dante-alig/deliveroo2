@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Obj = ({ elem2, panier, setPanier }) => {
+const Obj = ({ elem2, panier, setPanier, total, setTotal }) => {
   return (
     <>
       <div
@@ -17,6 +17,7 @@ const Obj = ({ elem2, panier, setPanier }) => {
             newPanier[findIndex].nbr++;
             setPanier(newPanier);
           }
+          setTotal(total + Number(elem2.price));
         }}
       >
         <h3>{elem2.title}</h3>

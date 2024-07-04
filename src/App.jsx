@@ -13,6 +13,7 @@ function App() {
   const [restoInfos, setRestoInfos] = useState();
   const [categories, setCategories] = useState([]);
   const [panier, setPanier] = useState([]);
+  const [total, setTotal] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -64,10 +65,17 @@ function App() {
             categories={categories}
             panier={panier}
             setPanier={setPanier}
+            total={total}
+            setTotal={setTotal}
           />
 
           {/* -----------------PANIER----------------- */}
-          <Panier panier={panier} setPanier={setPanier} />
+          <Panier
+            panier={panier}
+            setPanier={setPanier}
+            total={total}
+            setTotal={setTotal}
+          />
         </div>
       </main>
     </>

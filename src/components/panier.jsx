@@ -1,8 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
-const Panier = ({ panier, setPanier }) => {
+const Panier = ({ panier, setPanier, total, setTotal }) => {
   let findIndex = [];
+  let calculeTotal = total + 2.5;
   return (
     <div className="panier">
       {panier.length === 0 ? (
@@ -27,7 +28,7 @@ const Panier = ({ panier, setPanier }) => {
                         const newPanier = [...panier];
                         newPanier[findIndex].nbr++;
                         setPanier(newPanier);
-                        console.log(findIndex);
+                        setTotal(total + Number(objet.price));
                       }}
                     >
                       <FontAwesomeIcon className="plus" icon="plus" />
@@ -41,6 +42,7 @@ const Panier = ({ panier, setPanier }) => {
                         const newPanier = [...panier];
                         newPanier[findIndex].nbr--;
                         setPanier(newPanier);
+                        setTotal((total = total - Number(objet.price)));
                       }}
                     >
                       <FontAwesomeIcon className="minus" icon="minus" />
@@ -50,7 +52,7 @@ const Panier = ({ panier, setPanier }) => {
                   <div>{objet.title}</div>
                 </div>
 
-                <div className="panier-price">{calculPrice}€</div>
+                <div className="panier-price">{calculPrice.toFixed(2)}€</div>
               </div>
             );
           })}
@@ -60,13 +62,13 @@ const Panier = ({ panier, setPanier }) => {
               <p>Frais de livraison</p>
             </div>
             <div>
-              <p>100$</p>
+              <p>{total.toFixed(2)}</p>
               <p>2€50</p>
             </div>
           </div>
           <div className="panier-total">
             <p>Total</p>
-            <p>1000€</p>
+            <p>{calculeTotal.toFixed(2)}</p>
           </div>
         </>
       )}
