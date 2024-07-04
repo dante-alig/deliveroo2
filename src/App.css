@@ -1,0 +1,190 @@
+/* ----------GLOBAL----------------------- */
+
+body {
+  font-family: "IBM Plex Sans";
+}
+
+h1 {
+  font-size: 29px;
+  font-weight: bold;
+  padding-top: 30px;
+}
+
+h2 {
+  font-size: 21px;
+  font-weight: bold;
+  margin: 20px 0px 20px 0px;
+}
+
+h3 {
+  font-size: 17px;
+  padding-bottom: 15px;
+  line-height: 20px;
+}
+
+main {
+  background-color: #f2f5f5;
+  min-height: 100vh;
+}
+
+/* ----------HEADER----------------------- */
+
+header {
+  border-bottom: solid 1px lightgrey;
+}
+
+header img {
+  width: 150px;
+}
+
+.container {
+  max-width: 1200px;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 auto;
+}
+
+/* ----------PRESENTATION----------------------- */
+
+.box-pres {
+  width: 100%;
+  background-color: white;
+}
+
+.pres {
+  max-width: 1200px;
+  display: flex;
+  margin: 0 auto;
+  padding: 20px 0px 20px 0px;
+  background-color: white;
+}
+
+.pres img {
+  width: 400px;
+  padding: 20px 0px 20px 0px;
+  border-radius: 25px;
+}
+
+.pres p {
+  padding: 20px 20px 0px 0px;
+  font-size: 18px;
+  line-height: 27px;
+  color: #868a8a;
+}
+
+/* ----------SECTION----------------------- */
+
+.big-box {
+  width: 1200px;
+  display: flex;
+  margin: 0 auto;
+}
+
+section {
+  width: 300px;
+  flex: 2;
+}
+
+.boxcol {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.col {
+  width: calc((100% - 20px) / 2);
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  height: 150px;
+  border-radius: 7px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.col img {
+  width: 100px;
+  border-radius: 10px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.col p:last-child {
+  padding-top: 10px;
+  color: #ff8001;
+  font-size: 14px;
+}
+
+.star {
+  margin-right: 5px;
+  font-size: 13px;
+}
+
+.cut {
+  line-height: 20px;
+  height: 40px;
+  overflow: hidden;
+  color: #b6b9b9;
+}
+
+/* ----------PANIER----------------------- */
+
+.panier {
+  width: 100%;
+  background-color: white;
+  margin: 10px;
+  min-height: 350px;
+  flex: 1;
+  position: sticky;
+  top: 0;
+  box-shadow: 5px 5px 15px #e0e3e3;
+  border-radius: 5px;
+  color: #868a8a;
+  padding: 15px;
+}
+
+.panier p {
+  text-align: center;
+  margin-top: 40px;
+}
+
+button {
+  all: unset;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+  height: 47px;
+  background-color: #bac3c3;
+  color: #8b9a9b;
+  border-radius: 5px;
+}
+
+.panier-select {
+  background-color: #02cdbd;
+  color: white;
+}
+
+.panier-title {
+  display: flex;
+}
+
+.panier-counter {
+  display: flex;
+}
+
+.panier-box {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.panier-calcul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.panier-total {
+  display: flex;
+  justify-content: space-between;
+}
