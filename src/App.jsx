@@ -18,7 +18,9 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3200/");
+        const response = await axios.get(
+          "http://reacteur--backend-deliveroo--dqd24mcv82s5.code.run/"
+        );
         const filteredCat = response.data.categories.filter(
           (cat) => cat.meals.length > 0
         );
