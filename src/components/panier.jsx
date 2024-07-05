@@ -9,7 +9,7 @@ const Panier = ({ panier, setPanier, total, setTotal }) => {
       {panier.length === 0 ? (
         <>
           <button>Valider mon panier</button>
-          <p>Votre panier est vide</p>
+          <p id="panier-center">Votre panier est vide</p>
         </>
       ) : (
         <>
@@ -31,7 +31,7 @@ const Panier = ({ panier, setPanier, total, setTotal }) => {
                         setTotal(total + Number(objet.price));
                       }}
                     >
-                      <FontAwesomeIcon className="plus" icon="plus" />
+                      <FontAwesomeIcon className="fa-regular" icon="plus" />
                     </div>
                     <div>{objet.nbr}</div>
                     <div
@@ -41,11 +41,16 @@ const Panier = ({ panier, setPanier, total, setTotal }) => {
                         );
                         const newPanier = [...panier];
                         newPanier[findIndex].nbr--;
-                        setPanier(newPanier);
-                        setTotal((total = total - Number(objet.price)));
+                        if (objet.nbr <= 0) {
+                          newPanier.splice(findIndex, 1);
+                          setPanier(newPanier);
+                        } else {
+                          setPanier(newPanier);
+                          setTotal((total = total - Number(objet.price)));
+                        }
                       }}
                     >
-                      <FontAwesomeIcon className="minus" icon="minus" />
+                      <FontAwesomeIcon className="fa-regular" icon="minus" />
                     </div>
                   </div>
 
@@ -57,18 +62,18 @@ const Panier = ({ panier, setPanier, total, setTotal }) => {
             );
           })}
           <div className="panier-calcul">
-            <div className="calc">
+            <div>
               <p>Sous-total</p>
               <p>Frais de livraison</p>
             </div>
             <div>
-              <p>{total.toFixed(2)}</p>
-              <p>2€50</p>
+              <p>{total.toFixed(2)}€</p>
+              <p>2.50€</p>
             </div>
           </div>
           <div className="panier-total">
-            <p>Total</p>
-            <p>{calculeTotal.toFixed(2)}</p>
+            <h2>Total</h2>
+            <p>{calculeTotal.toFixed(2)}€</p>
           </div>
         </>
       )}

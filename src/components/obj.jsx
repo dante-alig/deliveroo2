@@ -21,15 +21,17 @@ const Obj = ({ elem2, panier, setPanier, total, setTotal }) => {
         }}
       >
         <h3>{elem2.title}</h3>
-        {elem2.description && <p className="cut">{elem2.description}</p>}
-        <p>{elem2.price.replace(".", ",")}€</p>
-        <div>
-          {elem2.popular === true && (
-            <p>
-              <FontAwesomeIcon className="star" icon="star" />
-              popular
-            </p>
-          )}
+        {elem2.description && <p className="cut-text">{elem2.description}</p>}
+        <div className="popular">
+          <p>{elem2.price.replace(".", ",")}€</p>
+          <div>
+            {elem2.popular === true && (
+              <p>
+                <FontAwesomeIcon className="star" icon="star" />
+                popular
+              </p>
+            )}
+          </div>
         </div>
       </div>
 

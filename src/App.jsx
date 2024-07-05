@@ -2,7 +2,7 @@ import "./App.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import logo from "./assets/deliveroo.svg";
-import Section from "../../section";
+import Section from "./components/section";
 import Panier from "./components/panier";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faStar, faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";

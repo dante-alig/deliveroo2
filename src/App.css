@@ -1,25 +1,30 @@
 /* ----------GLOBAL----------------------- */
-
 body {
   font-family: "IBM Plex Sans";
 }
 
+h1,
+h2,
+h3 {
+  font-weight: bold;
+}
+
 h1 {
   font-size: 29px;
-  font-weight: bold;
   padding-top: 30px;
 }
 
 h2 {
   font-size: 21px;
-  font-weight: bold;
-  margin: 20px 0px 20px 0px;
+  margin: 20px 0;
+  color: black;
 }
 
 h3 {
-  font-size: 17px;
-  padding-bottom: 15px;
+  font-size: 20px;
+  padding-bottom: 12px;
   line-height: 20px;
+  font-weight: normal;
 }
 
 main {
@@ -28,9 +33,8 @@ main {
 }
 
 /* ----------HEADER----------------------- */
-
 header {
-  border-bottom: solid 1px lightgrey;
+  border-bottom: 1px solid lightgrey;
 }
 
 header img {
@@ -45,8 +49,8 @@ header img {
 }
 
 /* ----------PRESENTATION----------------------- */
-
-.box-pres {
+.box-pres,
+.pres {
   width: 100%;
   background-color: white;
 }
@@ -55,25 +59,23 @@ header img {
   max-width: 1200px;
   display: flex;
   margin: 0 auto;
-  padding: 20px 0px 20px 0px;
-  background-color: white;
+  padding: 20px 0;
 }
 
 .pres img {
   width: 400px;
-  padding: 20px 0px 20px 0px;
+  padding: 20px 0;
   border-radius: 25px;
 }
 
 .pres p {
-  padding: 20px 20px 0px 0px;
+  padding: 20px 20px 0 0;
   font-size: 18px;
   line-height: 27px;
   color: #868a8a;
 }
 
 /* ----------SECTION----------------------- */
-
 .big-box {
   width: 1200px;
   display: flex;
@@ -93,27 +95,27 @@ section {
 }
 
 .col {
-  width: calc((100% - 20px) / 2);
+  width: calc(50% - 10px);
   background-color: white;
   display: flex;
   justify-content: space-between;
   height: 150px;
   border-radius: 7px;
-  padding: 10px;
+  padding: 15px;
   cursor: pointer;
 }
 
 .col img {
   width: 100px;
   border-radius: 10px;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
 }
 
 .col p:last-child {
-  padding-top: 10px;
   color: #ff8001;
   font-size: 14px;
+  padding-left: 20px;
 }
 
 .star {
@@ -121,20 +123,26 @@ section {
   font-size: 13px;
 }
 
-.cut {
+.cut-text {
   line-height: 20px;
   height: 40px;
   overflow: hidden;
   color: #b6b9b9;
+  font-size: 15px;
+  margin-bottom: 10px;
+  padding-left: 5px;
+}
+
+.popular {
+  display: flex;
 }
 
 /* ----------PANIER----------------------- */
-
 .panier {
   width: 100%;
   background-color: white;
   margin: 10px;
-  min-height: 350px;
+  height: 550px;
   flex: 1;
   position: sticky;
   top: 0;
@@ -144,7 +152,7 @@ section {
   padding: 15px;
 }
 
-.panier p {
+#panier-center {
   text-align: center;
   margin-top: 40px;
 }
@@ -160,31 +168,46 @@ button {
   border-radius: 5px;
 }
 
-.panier-select {
+button.panier-select {
   background-color: #02cdbd;
   color: white;
 }
 
-.panier-title {
+.panier-title,
+.panier-counter,
+.panier-box,
+.panier-total {
   display: flex;
-}
-
-.panier-counter {
-  display: flex;
+  justify-content: space-between;
 }
 
 .panier-box {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 20px;
+  margin-bottom: 15px;
+  line-height: 23px;
 }
 
 .panier-calcul {
   display: flex;
   justify-content: space-between;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  color: black;
 }
 
-.panier-total {
-  display: flex;
-  justify-content: space-between;
+.panier-calcul p,
+.panier-total h2,
+.panier-total p {
+  margin: 20px 0;
+  color: black;
+}
+
+.fa-regular {
+  font-size: 12px;
+  border-radius: 100px;
+  padding: 3px;
+  border: 1px solid #02cdbd;
+  color: #02cdbd;
+  margin: 5px;
+  position: relative;
+  top: -4px;
 }
